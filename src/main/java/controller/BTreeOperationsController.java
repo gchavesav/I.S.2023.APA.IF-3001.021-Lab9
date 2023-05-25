@@ -2,9 +2,12 @@ package controller;
 
 import domain.BTree;
 import domain.BTreeNode;
+import domain.TreeException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.control.Alert;
+import javafx.scene.control.TextInputDialog;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
@@ -19,9 +22,12 @@ public class BTreeOperationsController
     @FXML
     private Pane drawPane;
     private BTree bTree;
+    private Alert alert;
+    private TextInputDialog dialog;
 
     @FXML
     public void initialize() {
+        this.alert = util.FXUtility.alert("", "");
         randomize(20);
         drawTree(bTree.getRoot(), 400, 50, 350);
     }
@@ -34,16 +40,33 @@ public class BTreeOperationsController
 
     @FXML
     void onActionAdd(ActionEvent event) {
+        int newNode = util.Utility.random(100);
+        bTree.add(newNode);
+        drawTree(bTree.getRoot(), 400, 50, 350);
+        alert.setAlertType(Alert.AlertType.INFORMATION);
+        alert.setContentText("The node: "+ newNode +" has been added successfully!");
+        alert.showAndWait();
+    }
+
+    @FXML
+    void onActionNodeHeight(ActionEvent event) {
+        dialog = util.FXUtility.dialog("Node Height","Height: ");
+        dialog.showAndWait();
+        int value = Integer.parseInt(dialog.getResult());
+        System.out.println(value);
+        this.alert=util.FXUtility.alert("Node Height","Height: ");
+        alert.setAlertType(Alert.AlertType.INFORMATION);
+        try {
+            alert.setContentText(String.valueOf(bTree.height(value)));
+            alert.showAndWait();
+        } catch (TreeException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 
     @FXML
     void onActionContains(ActionEvent event) {
-
-    }
-
-    @FXML
-    void onActionNodeHeight(ActionEvent event) {
 
     }
 
@@ -64,8 +87,8 @@ public class BTreeOperationsController
             // Dibujar las conexiones con los nodos hijos primero
             if (node.left != null) {
                 double childX = x - levelWidth / 2;
-                double childY = y + 50;
-                drawTree(node.left, childX, childY, levelWidth / 2);
+                double childY = y + 40;
+                drawTree(node.left, childX, childY, levelWidth / 1.8);
 
                 // Dibujar una línea desde el nodo actual al nodo hijo izquierdo
                 Line line = new Line(x, y, childX, childY - 20);
@@ -74,8 +97,8 @@ public class BTreeOperationsController
 
             if (node.right != null) {
                 double childX = x + levelWidth / 2;
-                double childY = y + 50;
-                drawTree(node.right, childX, childY, levelWidth / 2);
+                double childY = y + 40;
+                drawTree(node.right, childX, childY, levelWidth / 1.8);
 
                 // Dibujar una línea desde el nodo actual al nodo hijo derecho
                 Line line = new Line(x, y, childX, childY - 20);
