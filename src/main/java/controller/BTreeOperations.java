@@ -66,6 +66,24 @@ public class BTreeOperations {
 
     @FXML
     void btnRemove(ActionEvent event) {
+        try {
+            boolean insertado= false;
+            do {
+                int value = util.Utility.random(50);
+                if (bTree.contains(value)) {
+                    bTree.remove(value);
+                    this.alert = util.FXUtility.alert("Node to remove", "Remove: ");
+                    alert.setContentText("Node " + value + " removed");
+                    alert.showAndWait();
+                    tela.getChildren().clear();
+                    drawTree(bTree.getRoot(), 400, 50, 350);
+                    insertado=true;
+                }
+            }while (!insertado);
+
+        } catch (TreeException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 
