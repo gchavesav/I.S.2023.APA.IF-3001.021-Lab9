@@ -53,7 +53,6 @@ public class BTreeOperationsController
         dialog = util.FXUtility.dialog("Node Height","Height: ");
         dialog.showAndWait();
         int value = Integer.parseInt(dialog.getResult());
-        System.out.println(value);
         this.alert=util.FXUtility.alert("Node Height","Height: ");
         alert.setAlertType(Alert.AlertType.INFORMATION);
         try {
