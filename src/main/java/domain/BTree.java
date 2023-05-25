@@ -270,4 +270,8 @@ public class BTree implements Tree {
         result+="PostOrder: "+postOrder(root)+"\n";
         return result;
     }
+
+    public BTreeNode getRoot() {
+        return root;
+    }
 }

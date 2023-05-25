@@ -8,12 +8,12 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane fx:id="bp" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GraphicBTreeController">
+<BorderPane fx:id="bp" prefHeight="463.0" prefWidth="671.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GraphicBTreeController">
    <center>
       <AnchorPane prefHeight="543.0" prefWidth="798.0">
          <children>
-            <TreeView fx:id="treeView" layoutY="74.0" prefHeight="469.0" prefWidth="798.0" />
-            <Pane prefHeight="74.0" prefWidth="798.0" style="-fx-background-color: orange;">
+            <TreeView fx:id="treeView" layoutY="202.0" prefHeight="404.0" prefWidth="872.0" />
+            <Pane prefHeight="74.0" prefWidth="872.0" style="-fx-background-color: orange;">
                <children>
                   <Text layoutX="266.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Graphic Binary Tree">
                      <font>
@@ -22,12 +22,12 @@
                   </Text>
                </children>
             </Pane>
-            <Button layoutY="74.0" mnemonicParsing="false" onAction="#randomizeOnAction" prefHeight="41.0" prefWidth="116.0" text="Randomize" />
-            <Button layoutY="122.0" mnemonicParsing="false" onAction="#levelsOnAction" prefHeight="41.0" prefWidth="116.0" text="Levels" />
-            <Text fx:id="treeHeightTextField" layoutX="125.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tree Height: 5" />
-            <Text layoutX="124.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PreOorder Transversal Tour: " />
-            <Text layoutX="124.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="InOrder Transversal Tour: " />
-            <Text layoutX="125.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PostOrder Transversal Tour: " />
+            <Button layoutY="74.0" mnemonicParsing="false" onAction="#randomizeOnAction" prefHeight="61.0" prefWidth="152.0" text="Randomize" />
+            <Button layoutX="-1.0" layoutY="141.0" mnemonicParsing="false" onAction="#levelsOnAction" prefHeight="56.0" prefWidth="154.0" text="Levels" />
+            <Text fx:id="treeHeightTextField" layoutX="160.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tree Height: " />
+            <Text layoutX="160.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PreOorder Transversal Tour: " />
+            <Text layoutX="160.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="InOrder Transversal Tour: " />
+            <Text layoutX="160.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PostOrder Transversal Tour: " wrappingWidth="173.1328125" />
          </children>
       </AnchorPane>
    </center>
