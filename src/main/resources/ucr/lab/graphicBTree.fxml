@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TreeView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
@@ -10,10 +10,9 @@
 
 <BorderPane fx:id="bp" prefHeight="463.0" prefWidth="671.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GraphicBTreeController">
    <center>
-      <AnchorPane prefHeight="543.0" prefWidth="798.0">
+      <AnchorPane prefHeight="463.0" prefWidth="827.0">
          <children>
-            <TreeView fx:id="treeView" layoutY="202.0" prefHeight="404.0" prefWidth="872.0" />
-            <Pane prefHeight="74.0" prefWidth="872.0" style="-fx-background-color: orange;">
+            <Pane prefHeight="74.0" prefWidth="773.0" style="-fx-background-color: orange;">
                <children>
                   <Text layoutX="266.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Graphic Binary Tree">
                      <font>
@@ -25,9 +24,10 @@
             <Button layoutY="74.0" mnemonicParsing="false" onAction="#randomizeOnAction" prefHeight="61.0" prefWidth="152.0" text="Randomize" />
             <Button layoutX="-1.0" layoutY="141.0" mnemonicParsing="false" onAction="#levelsOnAction" prefHeight="56.0" prefWidth="154.0" text="Levels" />
             <Text fx:id="treeHeightTextField" layoutX="160.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tree Height: " />
-            <Text layoutX="160.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PreOorder Transversal Tour: " />
-            <Text layoutX="160.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="InOrder Transversal Tour: " />
-            <Text layoutX="160.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PostOrder Transversal Tour: " wrappingWidth="173.1328125" />
+            <Text fx:id="preOrderTextField" layoutX="160.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PreOorder Transversal Tour: " />
+            <Text fx:id="inOrderTextField" layoutX="160.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="InOrder Transversal Tour: " />
+            <Text fx:id="postOrderTextField" layoutX="160.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PostOrder Transversal Tour: " wrappingWidth="173.1328125" />
+            <Group fx:id="treeGroup" layoutX="414.0" layoutY="298.0" />
          </children>
       </AnchorPane>
    </center>
