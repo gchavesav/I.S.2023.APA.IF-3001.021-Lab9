@@ -10,7 +10,7 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.scene.text.Text;
 
-public class bTreeOperations
+public class BTreeOperations
 {
     private BTree bTree; // Tu árbol binario
 
@@ -24,12 +24,9 @@ public class bTreeOperations
         bTree = new BTree();
 
         // Agregar elementos al árbol binario
-        bTree.add(util.Utility.random(50));
-        bTree.add(util.Utility.random(50));
-        bTree.add(util.Utility.random(50));
-        bTree.add(util.Utility.random(50));
-        bTree.add(util.Utility.random(50));
-        bTree.add(util.Utility.random(50));
+        for (int i = 0; i < 20; i++){
+            bTree.add(util.Utility.random(50));
+        }
         // ...
 
         // Crear el grupo de nodos para el árbol

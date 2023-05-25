@@ -7,12 +7,12 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.bTreeOperations">
+<BorderPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BTreeOperations">
    <center>
-      <AnchorPane prefHeight="686.0" prefWidth="964.0" style="-fx-background-color: beige;">
+      <AnchorPane prefHeight="1616.0" prefWidth="1269.0" style="-fx-background-color: beige;">
          <children>
-            <Pane fx:id="tela" layoutX="113.0" layoutY="212.0" prefHeight="440.0" prefWidth="742.0" />
-            <Pane prefHeight="100.0" prefWidth="1010.0" style="-fx-background-color: lightblue;">
+            <Pane fx:id="tela" layoutX="13.0" layoutY="211.0" prefHeight="566.0" prefWidth="1256.0" />
+            <Pane prefHeight="100.0" prefWidth="1270.0" style="-fx-background-color: lightblue;">
                <children>
                   <Text layoutX="188.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Graphic Binary Tree - Operations">
                      <font>
@@ -21,12 +21,12 @@
                   </Text>
                </children>
             </Pane>
-            <Button layoutX="278.0" layoutY="121.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="148.0" text="Add" />
-            <Button layoutX="276.0" layoutY="177.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="151.0" text="Remove" />
-            <Button layoutX="527.0" layoutY="121.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="189.0" text="Node Height" />
-            <Button layoutX="519.0" layoutY="177.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="191.0" text="Tree Height" />
-            <Button layoutX="23.0" layoutY="121.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="152.0" text="Randomize" />
-            <Button layoutX="23.0" layoutY="177.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="154.0" text="Contains" />
+            <Button layoutX="337.0" layoutY="121.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="188.0" text="Add" />
+            <Button layoutX="335.0" layoutY="170.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="191.0" text="Remove" />
+            <Button layoutX="634.0" layoutY="121.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="199.0" text="Node Height" />
+            <Button layoutX="635.0" layoutY="170.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="197.0" text="Tree Height" />
+            <Button layoutX="23.0" layoutY="121.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="214.0" text="Randomize" />
+            <Button layoutX="23.0" layoutY="177.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="212.0" text="Contains" />
          </children></AnchorPane>
    </center>
 </BorderPane>
