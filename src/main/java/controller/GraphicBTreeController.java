@@ -25,9 +25,6 @@ public class GraphicBTreeController
     @javafx.fxml.FXML
     private Text treeHeightTextField;
     @javafx.fxml.FXML
-    private Group treeGroup;
-    private Circle nodeCircle;
-    @javafx.fxml.FXML
     private Text preOrderTextField;
     @javafx.fxml.FXML
     private Text inOrderTextField;
@@ -40,10 +37,10 @@ public class GraphicBTreeController
     @javafx.fxml.FXML
     public void initialize() throws TreeException {
         tree = new BTree();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 20; i++) {
             tree.add(util.Utility.random(50));
         }
-        drawBinaryTree(tree.getRoot(),  400, 50, 200);
+        drawBinaryTree(tree.getRoot(),  500, 100, 200);
         setFields();
     }
 
