@@ -3,6 +3,10 @@ package domain;
 public class BTree implements Tree {
     private BTreeNode root;
 
+    public BTreeNode getRoot() {
+        return root;
+    }
+
     public BTree() {
         this.root = null;
     }
@@ -99,14 +103,14 @@ public class BTree implements Tree {
                 //Caso 1. Es un nodo sin hijos. Es una hoja
                 if(node.left==null && node.right==null)
                     return null;
-                //Caso 2. El nodo solo tiene un hijo
+                    //Caso 2. El nodo solo tiene un hijo
                 else if(node.left!=null && node.right==null){
                     node.left = newPathLabel(node.left, node.path);
                     return node.left; //retorna el subarbol izq y sustituye el nodo actual
                 } else if(node.left==null && node.right!=null){
                     node.right = newPathLabel(node.right, node.path);
                     return node.right; //retorna el subarbol derecho y sustituye el nodo actual
-                //Caso 3. El nodo tiene 2 hijos
+                    //Caso 3. El nodo tiene 2 hijos
                 }else if(node.left!=null && node.right!=null){
                     Object value = getLeaf(node.right);
                     node.data = value;
@@ -146,7 +150,7 @@ public class BTree implements Tree {
     private Object getLeaf(BTreeNode node) {
         if(node==null)
             return null;
-        //Si es una hoja
+            //Si es una hoja
         else if(node.left==null && node.right==null)
             return node.data; //es una hoja
         else{
