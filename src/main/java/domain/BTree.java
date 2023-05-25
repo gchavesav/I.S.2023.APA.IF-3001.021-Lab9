@@ -29,7 +29,7 @@ public class BTree implements Tree {
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return root==null;
     }
 
     @Override
