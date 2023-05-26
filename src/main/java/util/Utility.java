@@ -1,11 +1,27 @@
 package util;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.Alert;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Random;
 
+/**
+ *
+ * @author Profesor Lic. Gilberth Chaves Avila
+ */
 public class Utility {
+
     private static Random random;    // pseudo-random number generator
     private static long seed;        // pseudo-random number generator seed
 
@@ -92,4 +108,55 @@ public class Utility {
         if(a instanceof Character&&b instanceof Character) return "Character";
         return "Unknown"; //desconocido
     }
+
+    public static char getAlphabet(){
+        char alfabeto[] = new char[26] ;
+        int cont=0;
+        for(char i='a';i<='z';i++)
+            alfabeto[cont++] = i;
+        return alfabeto[(int) (Math.random() * 25 - 1)];
+    }
+
+    public static int maxArray(int[] a) {
+        int max = a[0]; //first element
+        for (int i = 1; i < a.length; i++) {
+            if(a[i]>max){
+                max=a[i];
+            }
+        }
+        return max;
+    }
+
+    public static void fill(int a[]){
+        int n = a.length;
+        for (int i = 0; i < n; i++){
+            a[i] = random(99);
+        }
+    }
+
+    public static void fill(int a[], int bound){
+        int n = a.length;
+        for (int i = 0; i < n; i++){
+            a[i] = random(bound);
+        }
+    }
+
+    public static String show(int[] a, int bound) {
+        String result = "";
+        for (int i = 0; i < bound; i++) {
+            result += a[i] + ", ";
+
+        }
+        return result;
+    }
+
+    public static String show(int[] a, int low, int high) {
+        String result = "";
+        for (int i = low; i < high; i++) {
+            result += a[i] + ", ";
+
+        }
+        return result;
+    }
+
 }

@@ -33,7 +33,7 @@ public class BTree implements Tree {
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return root==null;
     }
 
     @Override
@@ -273,5 +273,9 @@ public class BTree implements Tree {
         result+="InOrder: "+inOrder(root)+"\n";
         result+="PostOrder: "+postOrder(root)+"\n";
         return result;
+    }
+
+    public BTreeNode getRoot() {
+        return root;
     }
 }

@@ -3,9 +3,7 @@ package domain;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 class BTreeTest {
-
     @Test
     void test() {
         BTree bTree = new BTree();
@@ -36,4 +34,5 @@ class BTreeTest {
             throw new RuntimeException(e);
         }
     }
+  
 }
