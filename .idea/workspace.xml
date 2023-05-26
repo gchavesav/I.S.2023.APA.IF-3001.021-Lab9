@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3585aa0-29e3-472b-a01a-a8ede06476fc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/BTreeOperationsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ucr/lab/bTreeOperations.fxml" afterDir="false" />
+    <list default="true" id="b3585aa0-29e3-472b-a01a-a8ede06476fc" name="Changes" comment="Parte del BTreeOperations del grupo 2 completa">
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/BTreeOperations.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/BTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/BTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/BTreeOperationsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/BTreeOperationsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ucr/lab/bTreeOperations.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ucr/lab/bTreeOperations.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="dev_C22202" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,11 +41,18 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Git.Branch.Popup.ShowAllRemotes": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/gabri/IdeaProjects/I.S.2023.APA.IF-3001.021-Lab9/src/main/java/controller"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gabri\IdeaProjects\I.S.2023.APA.IF-3001.021-Lab9\src\main\java\controller" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ucr.lab.HelloApplication" />
@@ -75,8 +81,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1684786820900</updated>
-      <workItem from="1684978562420" duration="4055000" />
+      <workItem from="1684978562420" duration="6412000" />
+      <workItem from="1684990255943" duration="310000" />
     </task>
+    <task id="LOCAL-00001" summary="Empieza el bTreeOperations">
+      <created>1684983248577</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1684983248577</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,5 +107,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Empieza el bTreeOperations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Empieza el bTreeOperations" />
   </component>
 </project>
