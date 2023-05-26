@@ -3,10 +3,6 @@ package domain;
 public class BTree implements Tree {
     private BTreeNode root;
 
-    public BTreeNode getRoot() {
-        return root;
-    }
-
     public BTree() {
         this.root = null;
     }

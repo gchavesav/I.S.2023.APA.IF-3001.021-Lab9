@@ -27,6 +27,7 @@ public class BTreeOperations {
     public void initialize() {
         // Crear una instancia de tu árbol binario
         bTree = new BTree();
+        this.alert = util.FXUtility.alert("", "");
         for (int i = 0; i < 20; i++) {
             bTree.add(util.Utility.random(50));
         }
@@ -35,17 +36,37 @@ public class BTreeOperations {
 
     @FXML
     void btnRandomize(ActionEvent event) {
+        tela.getChildren().clear();
+        for (int i = 0; i < 20; i++) {
+            bTree.add(util.Utility.random(50));
+        }
+        drawTree(bTree.getRoot(), 400, 50, 350);
     }
 
 
     @FXML
     void btnAdd(ActionEvent event) {
-
+        int newNode = util.Utility.random(100);
+        bTree.add(newNode);
+        drawTree(bTree.getRoot(), 400, 50, 350);
+        alert.setAlertType(Alert.AlertType.INFORMATION);
+        alert.setContentText("The node: "+ newNode +" has been added successfully!");
+        alert.showAndWait();
     }
 
     @FXML
     void btnNodeHeight(ActionEvent event) {
-
+        dialog = util.FXUtility.dialog("Node Height","Height: ");
+        dialog.showAndWait();
+        int value = Integer.parseInt(dialog.getResult());
+        this.alert=util.FXUtility.alert("Node Height","Height: ");
+        alert.setAlertType(Alert.AlertType.INFORMATION);
+        try {
+            alert.setContentText(String.valueOf(bTree.height(value)));
+            alert.showAndWait();
+        } catch (TreeException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML
